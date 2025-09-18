@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "qDKDesd339hIs4ySedDPKhRdDaGbp9+WkA7BV+pR2yI=",
+  "Source": "JobPortal.API",
+  "BasePath": "_content/JobPortal.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "JobPortal.API\\wwwroot",
+      "Source": "JobPortal.API",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "BasePath": "_content/JobPortal.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf",
+      "SourceId": "JobPortal.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "BasePath": "_content/JobPortal.API",
+      "RelativePath": "resumes/fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resumes\\fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf"
+    }
+  ]
+}
