@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using MediatR;
 
 namespace JobPortal.API;
 // ================= ApplicantProfilesController =================
@@ -13,14 +14,13 @@ namespace JobPortal.API;
 [Authorize(Roles = "Applicant")]
 public class ApplicantProfilesController : ControllerBase
 {
-        private readonly IApplicantProfileService _profileService;
- private Guid? CurrentUserId =>
+        private readonly IMediator _mediator;
+    
+    private Guid? CurrentUserId =>
         Guid.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var id) ? id : null;
 
-      public ApplicantProfilesController(IApplicantProfileService profileService)
-        {
-            _profileService = profileService;
-        }
+      
+   public ApplicantProfilesController(IMediator mediator) => _mediator = mediator;
 
 
         [HttpPost("createOrUpdate")]
@@ -29,18 +29,18 @@ public class ApplicantProfilesController : ControllerBase
         if (dto == null) return BadRequest("Invalid data.");
         if (CurrentUserId is null) return Unauthorized(new { message = "Invalid user. Please log in." });
 
-        var profile = new ApplicantProfile
-        {
-            UserId = CurrentUserId.Value,
-            FullName = dto.FullName ?? string.Empty,
-            Phone = dto.Phone ?? string.Empty,
-            Skills = dto.Skills ?? string.Empty,
-            Education = dto.Education ?? string.Empty,
-            ResumeUrl = dto.ResumeUrl ?? string.Empty
-        };
+        var command = new CreateOrUpdateApplicantProfileCommand(
+        CurrentUserId.Value,
+        dto.FullName ?? string.Empty,
+        dto.Phone ?? string.Empty,
+        dto.Skills ?? string.Empty,
+        dto.Education ?? string.Empty,
+        dto.ResumeUrl ?? string.Empty
+    );
+        // var updated = await _profileService.CreateOrUpdateProfileAsync(profile, ct);
+            var result = await _mediator.Send(command, ct);
 
-        var updated = await _profileService.CreateOrUpdateProfileAsync(profile, ct);
-        return Ok(updated);
+        return Ok(result);
     }
 
 
@@ -48,8 +48,10 @@ public class ApplicantProfilesController : ControllerBase
     public async Task<IActionResult> GetMyProfile(CancellationToken ct)
     {
         if (CurrentUserId is null) return Unauthorized(new { message = "Invalid user. Please log in." });
+            var query = new GetMyProfileQuery(CurrentUserId.Value);
+             var profile= await _mediator.Send(query, ct);
 
-        var profile = await _profileService.GetProfileAsync(CurrentUserId.Value, ct);
+        // var profile = await _profileService.GetProfileAsync(CurrentUserId.Value, ct);
         if (profile == null) return NotFound(new { message = "You have not set up your profile." });
 
         return Ok(profile);
@@ -61,32 +63,27 @@ public class ApplicantProfilesController : ControllerBase
     {
         if (file == null || file.Length == 0) return BadRequest("No file uploaded.");
         if (CurrentUserId is null) return Unauthorized();
-
-        var profile = await _profileService.GetProfileAsync(CurrentUserId.Value, ct);
-        if (profile == null || profile.Id != profileId)
-            return Forbid("Profile not found or you don't have permission.");
-
-        var allowed = new[] { ".pdf", ".docx", ".doc" };
-        var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
-        if (!allowed.Contains(ext)) return BadRequest("Only PDF/DOC/DOCX files are allowed.");
-
-        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "resumes");
-        Directory.CreateDirectory(uploadsFolder);
-
-        var uniqueFileName = $"{Guid.NewGuid()}{ext}";
-        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-        using (var stream = new FileStream(filePath, FileMode.Create))
+            var command = new UploadResumeCommand(CurrentUserId.Value, profileId, file);
+    
+        try
         {
-            await file.CopyToAsync(stream, ct);
+            var resumeUrl = await _mediator.Send(command, ct);
+            return Ok(new { message = "Resume uploaded successfully" });
         }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Forbid(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        // var saved = await _profileService.UploadResumePathAsync(CurrentUserId.Value, profileId, resumeUrl, ct);
 
-        var resumeUrl = $"/resumes/{uniqueFileName}";
-        var saved = await _profileService.UploadResumePathAsync(CurrentUserId.Value, profileId, resumeUrl, ct);
-
-        if (saved == null) return NotFound("Profile not found or could not save resume path.");
-        return Ok(new { message = "Resume uploaded successfully", resumeUrl });
+        // if (saved == null) return NotFound("Profile not found or could not save resume path.");
+        // return Ok(new { message = "Resume uploaded successfully", resumeUrl });
     }
 
     
 }
+

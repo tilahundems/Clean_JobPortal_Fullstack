@@ -30,6 +30,12 @@ public  static class DependencyInjection
             
             );
 
+
+        
+
+
+
+
             //repository registration
         services.AddScoped<IJobRepository, JobRepository>();
         services.AddScoped<IApplicationRepository, ApplicationRepository>();

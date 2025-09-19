@@ -35,7 +35,7 @@ public interface IApplicationService
 public interface IApplicantProfileService
 {
     Task<ApplicantProfileDto?> GetProfileAsync(Guid userId, CancellationToken ct = default);
-    Task<ApplicantProfileDto?> CreateOrUpdateProfileAsync(ApplicantProfile profile, CancellationToken ct = default);
+    Task<ApplicantProfileDto> CreateOrUpdateProfileAsync(ApplicantProfile profile, CancellationToken ct = default);
    Task<string?> UploadResumePathAsync(Guid userId, Guid profileId, string resumePath, CancellationToken ct = default);
 
 }
