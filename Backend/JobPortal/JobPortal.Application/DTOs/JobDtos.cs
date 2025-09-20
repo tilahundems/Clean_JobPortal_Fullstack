@@ -41,10 +41,3 @@ namespace JobPortal.Application;
 
     
 
-//     public record CreateJobRequest(
-//     string Title,
-//     string Description,
-//     string Location,
-//     DateTime? ExpiryDate,
-//     Guid PostedById
-// );

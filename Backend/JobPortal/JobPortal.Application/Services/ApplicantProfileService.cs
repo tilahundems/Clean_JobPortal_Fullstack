@@ -31,7 +31,7 @@ public class ApplicantProfileService : IApplicantProfileService
         };
     }
 
-   public async Task<ApplicantProfileDto?> CreateOrUpdateProfileAsync(ApplicantProfile profile, CancellationToken ct = default)
+   public async Task<ApplicantProfileDto> CreateOrUpdateProfileAsync(ApplicantProfile profile, CancellationToken ct = default)
     {
         var saved = await _repository.CreateOrUpdateProfileAsync(profile, ct);
            

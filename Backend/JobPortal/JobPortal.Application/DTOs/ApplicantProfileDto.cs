@@ -9,5 +9,4 @@ public class ApplicantProfileDto
     public string Skills { get; set; } = string.Empty;
     public string? Education { get; set; }
     public string? ResumeUrl { get; set; }
-    // public List<ApplicationDto>? Applications { get; set; }
 }

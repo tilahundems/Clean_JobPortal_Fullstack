@@ -1,5 +1,8 @@
 using JobPortal.API;
 using JobPortal.Application;
+using FluentValidation;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +12,11 @@ builder.Services.AddIdentityServices();
 builder.Services.ConfigureApplicationCookieServices();
 builder.Services.AddCorsServices();
 builder.Services.AddSwaggerServices();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateJobDtoValidator>();
+
 builder.Services.AddControllers();
+
 builder.Services.AddApplication();
-
-
 
 var app = builder.Build();
 
@@ -35,5 +39,8 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+
 
 app.Run();

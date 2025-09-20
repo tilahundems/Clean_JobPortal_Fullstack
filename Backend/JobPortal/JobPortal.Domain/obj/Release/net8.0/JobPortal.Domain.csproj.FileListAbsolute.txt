@@ -1,0 +1,13 @@
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\bin\Release\net8.0\JobPortal.Domain.deps.json
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\bin\Release\net8.0\JobPortal.Domain.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\bin\Release\net8.0\JobPortal.Domain.pdb
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.csproj.AssemblyReference.cache
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.AssemblyInfoInputs.cache
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.AssemblyInfo.cs
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.sourcelink.json
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\refint\JobPortal.Domain.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\JobPortal.Domain.pdb
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.Domain\obj\Release\net8.0\ref\JobPortal.Domain.dll

@@ -155,3 +155,6 @@ C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\MediatR.dll
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
