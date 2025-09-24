@@ -1,0 +1,7 @@
+/* src/index.css */
+@import "antd/dist/reset.css";   /* AntD v5 reset */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small app-level custom styles below */
