@@ -9,9 +9,10 @@ import {
   Button,
   Modal,
   Space,
-  message,
+ 
   Typography,
-  Spin
+  Spin,
+  message
 } from "antd";
 import {
   EditOutlined,
@@ -28,7 +29,7 @@ const { Text } = Typography;
 
 const ManageJobs: React.FC = () => {
   const queryClient = useQueryClient();
-
+const [msgapi ,contextholder] = message.useMessage();
   // Modal state
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [jobToDelete, setJobToDelete] = useState<JobDto | null>(null);
@@ -39,17 +40,19 @@ const ManageJobs: React.FC = () => {
     queryFn: fetchJobs,
   });
 
+
+   
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => deleteJob(id),
     onSuccess: () => {
-      message.success("Job deleted successfully");
+      msgapi.success("Job deleted successfully");
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       setShowDeleteModal(false);
       setJobToDelete(null);
     },
     onError: (err: any) => {
-      message.error(err.response?.data?.message || "Failed to delete job");
+      msgapi.error(err.response?.data?.message || "Failed to delete job");
     },
   });
 
@@ -73,7 +76,7 @@ const ManageJobs: React.FC = () => {
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold mb-6">Manage Jobs</h1>
-
+      {contextholder}
       {isLoading ? (
       <Spin className="flex flex-center justify-center" />
       ) : (
@@ -86,32 +89,31 @@ const ManageJobs: React.FC = () => {
                 hoverable
               >
                 {/* Job Meta */}
-                <div className="flex flex-wrap gap-3 text-gray-500 mb-2 text-sm">
+                <div className="flex flex-wrap gap-3 text-gray-500 mb-2 text-sm font-thin ">
                   <div className="flex items-center gap-1">
                     <CalendarOutlined className="text-blue-500" />
                     <Text type="secondary"> {job.expiryDate ? new Date(job.expiryDate).toLocaleDateString() : "—"}</Text>
                               
 
                   </div>
-                  <div className="flex items-center gap-1">
-                    <UserOutlined />
-                    <Text>{job.company}</Text>
-                  </div>
-                  <div className="flex items-center gap-1">
+                
+                  <div className="flex items-center  font-thin">
                     <EnvironmentOutlined />
                     <Text>{job.location}</Text>
                   </div>
                 </div>
 
                 {/* Job Title */}
-                <Text strong className="text-lg mb-4 block">
-                  {job.title}
-                </Text>
+             
+              <Text strong className="text-lg mb-2 block font-mono" style={{ minHeight: 28, display: 'block', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
+                {job.title}
+              </Text>
 
                 {/* Description */}
-                <p className="mb-6 text-gray-700 line-clamp-3 text-center">
+                <p className="mb-6 text-gray-700 line-clamp-3 ">
                   {job.description}
                 </p>
+
 
                 {/* Action Buttons */}
                 <Space direction="vertical" size="small" className="w-full">

@@ -11,6 +11,7 @@ const EditJob: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [form] = Form.useForm();
+  const [msgapi ,contextholder] = message.useMessage();
 
 
   // Fetch job details
@@ -24,11 +25,14 @@ const EditJob: React.FC = () => {
   const mutation = useMutation({
     mutationFn: (updated: any) => updateJob(id? id : "" , updated),
     onSuccess: () => {
-      message.success("Job updated successfully!");
-      navigate("/ManageJobs");
+      msgapi.success("Job updated successfully!");
+      setTimeout(() => {
+        navigate("/ManageJobs");
+      }, 1500);
+      
     },
     onError: (err: any) => {
-      message.error(err.response?.data?.message || "Job update failed");
+      msgapi.error(err.response?.data?.message || "Job update failed");
     },
   });
 
@@ -54,7 +58,7 @@ const EditJob: React.FC = () => {
     <div className="p-4 bg-gray-50 min-h-screen flex justify-center">
       <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-3xl">
         <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Edit Job</h1>
-
+        {contextholder}
         <Form
           form={form}
           layout="vertical"
@@ -86,19 +90,7 @@ const EditJob: React.FC = () => {
               </Form.Item>
             </Col>
 
-            {/* <Col xs={24} md={12}>
-              <Form.Item
-                label="Job Type"
-                name="type"
-                rules={[{ required: true, message: "Please select job type" }]}
-              >
-                <Select size="middle" placeholder="Select type">
-                  <Option value="Full-Time">Full-Time</Option>
-                  <Option value="Part-Time">Part-Time</Option>
-                  <Option value="Internship">Internship</Option>
-                </Select>
-              </Form.Item>
-            </Col> */}
+         
 
             <Col xs={24} md={12}>
               <Form.Item
@@ -127,9 +119,12 @@ const EditJob: React.FC = () => {
           </Row>
 
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full md:w-auto">
+             <div className="justify-center flex items-center"> 
+            <Button type="primary" htmlType="submit" className="  w-1/2" loading={mutation.isPending} >
               Update Job
             </Button>
+            
+            </div>
           </Form.Item>
         </Form>
       </div>

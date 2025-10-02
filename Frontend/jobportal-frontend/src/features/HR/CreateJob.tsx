@@ -22,12 +22,12 @@ const CreateJob: React.FC = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const user = JSON.parse(localStorage.getItem("user") || "{}");
-
+  const [msgapi,contextholder] = message.useMessage();
   // Mutation hook
   const mutation = useMutation({
     mutationFn: createJob,
     onSuccess: () => {
-      message.success("Job created successfully!");
+      msgapi.success("Job created successfully!");
       setTimeout(() => {
         navigate("/ManageJobs");
       }, 1000);
@@ -35,7 +35,7 @@ const CreateJob: React.FC = () => {
      
     },
     onError: (err: any) => {
-      message.error(err.response?.data?.message || "Job creation failed");
+      msgapi.error(err.response?.data?.message || "Job creation failed");
     },
   });
 
@@ -58,7 +58,7 @@ const CreateJob: React.FC = () => {
         <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
           Create Job
         </h1>
-
+     {contextholder}
         <Form form={form} layout="vertical" onFinish={onFinish}>
           <Row gutter={16}>
             {/* Job Title */}
@@ -146,15 +146,19 @@ const CreateJob: React.FC = () => {
 
           {/* Submit Button */}
           <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="w-full md:w-auto"
-              loading={mutation.status==="pending"}
-              disabled={mutation.isPending}
-            >
-              Create Job
-            </Button>
+            <div className="justify-center flex items-center"> 
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="w-1/2"
+                  loading={mutation.status==="pending"}
+                  disabled={mutation.isPending}
+                >
+                  Create Job
+                </Button>
+          </div>
+              
+                      
           
           </Form.Item>
         </Form>

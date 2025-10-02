@@ -53,9 +53,7 @@ export default function JobDetail() {
       >
         {/* Info row */}
         <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-x-6 text-gray-500 mb-4 text-sm">
-          <span className="flex items-center gap-1">
-            <UserOutlined /> {job.company}
-          </span>
+         
           <span className="flex items-center gap-1">
             <EnvironmentOutlined /> {job.location}
           </span>
@@ -64,11 +62,17 @@ export default function JobDetail() {
            
            {job.expiryDate ? new Date(job.expiryDate).toLocaleDateString() : "—"}
           </span>
-        </div>
-          <p className="text-gray-400 mb-4 text-sm">
+          
+          <span className="flex items-center gap-1">
+           <p>
             <CalendarOutlined />{" "}
           Posted: {job.postedDate ? new Date(job.postedDate).toLocaleDateString() : "—"}
         </p>
+          </span>
+
+
+        </div>
+         
         {/* Description */}
         <p className="mb-6 text-gray-700 leading-relaxed">{job.description}</p>
 

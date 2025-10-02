@@ -64,9 +64,25 @@ const Applications: React.FC = () => {
   if (applications.length === 0)
     return <Empty description="No applications found" />;
 
-  return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <h2 className="text-2xl font-bold mb-6">My Applications</h2>
+//   return (
+//     <div className="p-6 bg-gray-50 min-h-screen">
+//       <h2 className="text-2xl font-bold mb-6">My Applications</h2>
+//       <Table
+//         rowKey="id"
+//         columns={columns}
+//         dataSource={applications}
+//         pagination={{ pageSize: 5 }}
+//       />
+//     </div>
+//   );
+// };
+
+
+return (
+  <div className="p-6 sm:p-4 min-h-screen bg-gray-50">
+    <h2 className="text-2xl sm:text-xl font-bold mb-4">My Applications</h2>
+
+    <div className="overflow-x-auto">
       <Table
         rowKey="id"
         columns={columns}
@@ -74,7 +90,7 @@ const Applications: React.FC = () => {
         pagination={{ pageSize: 5 }}
       />
     </div>
-  );
+  </div>
+);
 };
-
 export default Applications;

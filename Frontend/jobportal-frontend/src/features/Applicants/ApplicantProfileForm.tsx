@@ -108,7 +108,7 @@ const ApplicantProfileForm: React.FC = () => {
       {contextHolder}
       <div className="flex justify-center p-6">
         <div className="w-full max-w-2xl bg-white p-6 shadow-md rounded-xl">
-          <h2 className="text-xl font-semibold mb-4">Edit Profile</h2>
+          <h2 className="text-xl font-semibold mb-4 flex justify-center">Create Or Update Profile</h2>
 
           <Form
             layout="vertical"
@@ -147,33 +147,37 @@ const ApplicantProfileForm: React.FC = () => {
                </Form.Item>
 
             {/* Resume Section */}
-            <Form.Item label="Resume">
-              <div className="flex items-center gap-4">
-                {resumeUrl ? (
-                  <>
-                    <PaperClipOutlined className="text-blue-500" />
-                    <span className="text-gray-700">Resume attached</span>
-                    <Button
-                      type="link"
-                      icon={<DownloadOutlined />}
-                      onClick={handleDownload}
-                    >
-                      Download
-                    </Button>
-                  </>
-                ) : (
-                  <span className="text-gray-500">No resume uploaded</span>
-                )}
+            
 
-                <Button
-                  icon={<UploadOutlined />}
-                  onClick={() => setShowUploadModal(true)}
-                    className="px-6 w-2/4 "
-                >
-                  {resumeUrl ? "Change Resume" : "Upload Resume"}
-                </Button>
-              </div>
-            </Form.Item>
+                      <Form.Item label="Resume">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-4">
+              {resumeUrl ? (
+                <>
+                  <div className="flex items-center gap-2 text-gray-700 md:flex-0">
+                    <PaperClipOutlined className="text-blue-500" />
+                    <span>Resume attached</span>
+                  </div>
+                  <Button
+                    type="link"
+                    icon={<DownloadOutlined />}
+                    onClick={handleDownload}
+                    className="md:ml-2"
+                  >
+                    Download
+                  </Button>
+                </>
+              ) : (
+                <span className="text-gray-500">No resume uploaded</span>
+              )}
+              <Button
+                icon={<UploadOutlined />}
+                onClick={() => setShowUploadModal(true)}
+                className="mt-2 md:mt-0 md:ml-auto px-6 w-full md:w-1/2"
+              >
+                {resumeUrl ? "Change Resume" : "Upload Resume"}
+              </Button>
+            </div>
+          </Form.Item>
 
             <Form.Item>
               <div className="md:col-span-2 flex justify-center">

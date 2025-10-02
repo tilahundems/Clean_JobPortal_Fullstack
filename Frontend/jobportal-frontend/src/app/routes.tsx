@@ -49,11 +49,12 @@ export default function AppRoutes() {
           <Route path="managejobs" element={<ManageJobs />} />
           <Route path="managejobs/edit/:id" element={<EditJob />} />
         </Route>
-      </Route>
-
-      {/* Error pages */}
+         {/* Error pages */}
       <Route path="403" element={<Forbidden />} />
       <Route path="*" element={<NotFound />} />
+      </Route>
+
+     
     </Routes>
   );
 }

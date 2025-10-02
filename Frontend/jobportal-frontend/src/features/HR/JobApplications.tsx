@@ -159,80 +159,165 @@ const JobApplications: React.FC = () => {
     },
   ];
 
-  return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6">Job Applications</h1>
+//   return (
+//     <div className="p-6 bg-gray-50 min-h-screen">
+//       <h1 className="text-3xl font-bold mb-6">Job Applications</h1>
 
-      {isLoading ? (
-        <div className="flex justify-center items-center h-64">
-          <Spin size="large" />
-        </div>
-      ) : isError ? (
-        <Empty description="Failed to load applications" />
-      ) : applications.length === 0 ? (
-        <Empty description="No applications found" />
-      ) : (
+//       {isLoading ? (
+//         <div className="flex justify-center items-center h-64">
+//           <Spin size="large" />
+//         </div>
+//       ) : isError ? (
+//         <Empty description="Failed to load applications" />
+//       ) : applications.length === 0 ? (
+//         <Empty description="No applications found" />
+//       ) : (
+//         <Table
+//           columns={columns}
+//           dataSource={applications}
+//           rowKey="id"
+//           pagination={{ pageSize: 5 }}
+//           bordered
+//         />
+//       )}
+
+//       {/* Details Modal */}
+//       <Modal
+//         title="Applicant Details"
+//         open={isModalOpen}
+//         onCancel={() => setIsModalOpen(false)}
+//         footer={null}
+//         width={800}
+//         centered
+//       >
+//         {selectedApplication && (
+//           <>
+//             <Descriptions bordered column={1} size="small" className="mb-4">
+//               <Descriptions.Item label="Name">
+//                 {selectedApplication.applicantName}
+//               </Descriptions.Item>
+//               {/* <Descriptions.Item label="Email">
+//                 {selectedApplication.email}
+//               </Descriptions.Item> */}
+//               <Descriptions.Item label="Job Title">
+//                 {selectedApplication.jobTitle}
+//               </Descriptions.Item>
+//               <Descriptions.Item label="Status">
+//                 <Tag color="blue">{selectedApplication.status}</Tag>
+//               </Descriptions.Item>
+//               <Descriptions.Item label="Cover Letter">
+//                 {selectedApplication.coverLetter || "N/A"}
+//               </Descriptions.Item>
+//               <Descriptions.Item label="Skills">
+//                 {selectedApplication.applicantProfile?.skills || "N/A"}
+//               </Descriptions.Item>
+//               <Descriptions.Item label="Education">
+//                 {selectedApplication.applicantProfile?.education || "N/A"}
+//               </Descriptions.Item>
+//               <Descriptions.Item label="Phone">
+//                 {selectedApplication.applicantProfile?.phone || "N/A"}
+//               </Descriptions.Item>
+//             </Descriptions>
+
+//             {selectedApplication.resumeUrl ? (
+//               <iframe
+//                 src={ selectedApplication.resumeUrl ? `${baseURL}${selectedApplication.resumeUrl}` : ""}
+//                 title="Resume"
+//                 style={{ width: "100%", height: "500px", border: "1px solid #ddd" }}
+//               />
+//             ) : (
+//               <Empty description="No resume uploaded" />
+//             )}
+//           </>
+//         )}
+//       </Modal>
+//     </div>
+//   );
+// };
+
+return (
+  <div className="p-6 sm:p-4 min-h-screen bg-gray-50">
+    <h1 className="text-3xl sm:text-2xl font-bold mb-6">Job Applications</h1>
+
+    {isLoading ? (
+      <div className="flex justify-center items-center h-64 sm:h-48">
+        <Spin size="large" />
+      </div>
+    ) : isError ? (
+      <Empty description="Failed to load applications" />
+    ) : applications.length === 0 ? (
+      <Empty description="No applications found" />
+    ) : (
+      // Make table responsive with horizontal scroll on small screens
+      <div className="overflow-x-auto">
         <Table
           columns={columns}
           dataSource={applications}
           rowKey="id"
           pagination={{ pageSize: 5 }}
           bordered
+          // Optional: keep table width natural; on small screens the scroll container handles it
         />
-      )}
+      </div>
+    )}
 
-      {/* Details Modal */}
-      <Modal
-        title="Applicant Details"
-        open={isModalOpen}
-        onCancel={() => setIsModalOpen(false)}
-        footer={null}
-        width={800}
-        centered
-      >
-        {selectedApplication && (
-          <>
-            <Descriptions bordered column={1} size="small" className="mb-4">
-              <Descriptions.Item label="Name">
-                {selectedApplication.applicantName}
-              </Descriptions.Item>
-              {/* <Descriptions.Item label="Email">
-                {selectedApplication.email}
-              </Descriptions.Item> */}
-              <Descriptions.Item label="Job Title">
-                {selectedApplication.jobTitle}
-              </Descriptions.Item>
-              <Descriptions.Item label="Status">
-                <Tag color="blue">{selectedApplication.status}</Tag>
-              </Descriptions.Item>
-              <Descriptions.Item label="Cover Letter">
-                {selectedApplication.coverLetter || "N/A"}
-              </Descriptions.Item>
-              <Descriptions.Item label="Skills">
-                {selectedApplication.applicantProfile?.skills || "N/A"}
-              </Descriptions.Item>
-              <Descriptions.Item label="Education">
-                {selectedApplication.applicantProfile?.education || "N/A"}
-              </Descriptions.Item>
-              <Descriptions.Item label="Phone">
-                {selectedApplication.applicantProfile?.phone || "N/A"}
-              </Descriptions.Item>
-            </Descriptions>
+    {/* Details Modal */}
+    <Modal
+      title="Applicant Details"
+      open={isModalOpen}
+      onCancel={() => setIsModalOpen(false)}
+      footer={null}
+      // Make modal width responsive: cap on large screens, full width on small
+      width={undefined} // allow responsive width
+      style={{ maxWidth: "90vw" }} // ensures modal never exceeds viewport
+      centered
+    >
+      {selectedApplication && (
+        <>
+          <Descriptions bordered column={1} size="small" className="mb-4">
+            <Descriptions.Item label="Name">
+              {selectedApplication.applicantName}
+            </Descriptions.Item>
+            {/* Email can be added back if needed */}
+            <Descriptions.Item label="Job Title">
+              {selectedApplication.jobTitle}
+            </Descriptions.Item>
+            <Descriptions.Item label="Status">
+              <Tag color="blue">{selectedApplication.status}</Tag>
+            </Descriptions.Item>
+            <Descriptions.Item label="Cover Letter">
+              {selectedApplication.coverLetter || "N/A"}
+            </Descriptions.Item>
+            <Descriptions.Item label="Skills">
+              {selectedApplication.applicantProfile?.skills || "N/A"}
+            </Descriptions.Item>
+            <Descriptions.Item label="Education">
+              {selectedApplication.applicantProfile?.education || "N/A"}
+            </Descriptions.Item>
+            <Descriptions.Item label="Phone">
+              {selectedApplication.applicantProfile?.phone || "N/A"}
+            </Descriptions.Item>
+          </Descriptions>
 
-            {selectedApplication.resumeUrl ? (
+          {selectedApplication.resumeUrl ? (
+            // Use a responsive iframe container
+            <div style={{ width: "100%", height: "auto", aspectRatio: "16/9" }}>
               <iframe
-                src={ selectedApplication.resumeUrl ? `${baseURL}${selectedApplication.resumeUrl}` : ""}
+                src={baseURL + selectedApplication.resumeUrl}
                 title="Resume"
-                style={{ width: "100%", height: "500px", border: "1px solid #ddd" }}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                style={{ width: "100%", height: "60vh", border: "1px solid #ddd" }}
               />
-            ) : (
-              <Empty description="No resume uploaded" />
-            )}
-          </>
-        )}
-      </Modal>
-    </div>
-  );
+            </div>
+          ) : (
+            <Empty description="No resume uploaded" />
+          )}
+        </>
+      )}
+    </Modal>
+  </div>
+);
 };
-
 export default JobApplications;

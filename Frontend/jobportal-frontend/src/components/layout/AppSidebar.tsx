@@ -6,13 +6,14 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   HomeOutlined,
   DashboardOutlined,
-  SolutionOutlined,
+  UserAddOutlined,
   ProfileOutlined,
   LoginOutlined,
-  LogoutOutlined,PlusOutlined,ToolOutlined
+  LogoutOutlined,PlusOutlined,ToolOutlined,UserOutlined,
+  DatabaseFilled,BoxPlotOutlined
 } from "@ant-design/icons";
-import { RiRegisteredFill } from "react-icons/ri";
 import { useAuth } from "../../app/AuthContext";
+import sitelogo from "../../../public/imgs/sitelogo.png";
 
 const { Sider } = Layout;
 
@@ -57,7 +58,7 @@ console.log(`Role-> ${role}`);
     {
       key: "/register",
       label: "Register",
-      icon: <RiRegisteredFill />,
+      icon: <BoxPlotOutlined />,
       onClick: () => navigate("/register"),
     },
   ]
@@ -94,19 +95,19 @@ console.log(`Role-> ${role}`);
     {
       key: "/profile",
       label: "Profile",
-      icon: <ProfileOutlined />,
+      icon: <UserOutlined />,
       onClick: () => navigate("/profile"),
     },
     {
       key: "/createProfile",
-      label: "Create Profile",
-      icon: <SolutionOutlined />,
+      label: "Create || Update Profile",
+      icon: <UserAddOutlined />,
       onClick: () => navigate("/createProfile"),
     },
     {
       key: "/apps",
       label: "Applications",
-      icon: <SolutionOutlined />,
+      icon: <DatabaseFilled />,
       onClick: () => navigate("/apps"),
     },
   ];
@@ -135,9 +136,29 @@ console.log(`Role-> ${role}`);
       trigger={null}
     >
       {/* Logo */}
+      {/* <div className="text-white text-xl p-4 text-center">
+        {collapsed ? "JP" :  (
+    <img
+      src={sitelogo}
+      alt="Abay Bank Logo"
+      style={{ maxWidth: "100%", height: "40px", objectFit: "contain" }}
+    />
+  )
+  }
+      </div> */}
+
       <div className="text-white text-xl p-4 text-center">
-        {collapsed ? "JP" : "JobPortal"}
-      </div>
+  {collapsed ? (
+    "JP"
+  ) : (
+    <img
+      src={sitelogo}
+      alt="Abay Bank Logo"
+      style={{ maxWidth: "100%", height: "40px", objectFit: "contain" }}
+    />
+  )}
+</div>
+
 
       {/* Menu */}
       <Menu
