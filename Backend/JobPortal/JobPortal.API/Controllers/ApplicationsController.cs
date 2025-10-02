@@ -25,9 +25,11 @@ public class ApplicationsController : ControllerBase
      [HttpPost("apply")]
     public async Task<IActionResult> Apply([FromBody] ApplyDto dto, CancellationToken ct)
     {
+       
+
         if (dto == null) return BadRequest("No data provided.");
          if (CurrentUserId is null) return Unauthorized(new { message = "Invalid user. Please log in." });
-
+           
         try
         {
               var cmd = new ApplyCommand(dto.JobId, dto.ApplicantProfileId, CurrentUserId.Value, dto.CoverLetter);

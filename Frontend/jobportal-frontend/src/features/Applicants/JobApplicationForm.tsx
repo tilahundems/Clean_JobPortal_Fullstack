@@ -26,24 +26,8 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
     queryFn: fetchApplicantProfile,
   });
 
-  // if(!profile)
-  // {
-  //   if(localStorage.getItem("user")  === null || localStorage.getItem("user")===undefined)
-  //   {
-  //     msgApi.error("Please Login First.");
-  //     setTimeout(() => {
-  //           navigate("/login");
-  //   }, 3000);
-  //  }
-    
-  //   else {
-  //               msgApi.error("Please complete your profile before applying.");
-  //   setTimeout(() => {
-  //           navigate("/createProfile");
-  //   }, 3000);}
-  // }
 
-
+ 
   const [form] = Form.useForm();
   const queryClient = useQueryClient();
     const navigate = useNavigate();
@@ -62,8 +46,8 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
        
     },
     onError: (err: any) => {
-      msgApi.error(err.response.statusText || "Failed to submit application.");
-      console.log(err.response.statusText);
+      // msgApi.error(err.response.statusText || "Failed to submit application.");
+      console.log(err);
     },
   });
 
@@ -81,15 +65,15 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
       </div>
     );
   }
-//  console.log(isError);
-//   if (isError) {
-//     return (
+ console.log(isError);
+  if (isError) {
+    return (
        
-//       <div className="p-6">
-//         <p className="text-red-600">Failed!! Please try again.{isError}</p>
-//       </div>
-//     );
-//   }
+      <div className="p-6">
+        <p className="text-red-600">Failed!! Please try again.{isError}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 flex justify-center">

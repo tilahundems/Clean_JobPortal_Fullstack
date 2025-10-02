@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import AppSidebar from "../layout/AppSidebar";
 import AppHeader from "./AppHeader";
  import bkg from '../../assets/bkg.gif';
+import AppFooter from "./AppFooter";
 
 const { Content } = Layout;
 
@@ -17,7 +18,7 @@ export default function MainLayout() {
 
   return (
    
-    <Layout  style={{ minHeight: "100vh"}}  >
+    <Layout  style={{ minHeight: "100vh", margin:"20px" }} className="font-serif"  >
      {contextHolder} 
       <AppSidebar collapsed={collapsed} onCollapse={setCollapsed} />
       <Layout>
@@ -25,6 +26,7 @@ export default function MainLayout() {
         <Content className="p-4  bg-gray-50"   >
           <Outlet />
         </Content>
+        <AppFooter />
       </Layout>
     </Layout>
     

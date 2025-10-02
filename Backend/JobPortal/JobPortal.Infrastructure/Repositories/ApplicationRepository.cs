@@ -12,6 +12,8 @@ public class ApplicationRepository : IApplicationRepository
 
     public async Task<JobApplication> AddAsync(JobApplication application, CancellationToken ct = default)
     {
+           
+      
         _db.Applications.Add(application);
         await _db.SaveChangesAsync(ct);
         return application;

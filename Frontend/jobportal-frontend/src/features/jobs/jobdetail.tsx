@@ -82,7 +82,7 @@ export default function JobDetail() {
           </Button>
           <Button
             className="w-full sm:w-1/2  text-base  bg-[rgb(65,176,232)]"
-              onClick={() => navigate(`/apply`)}
+              onClick={() => navigate(`apply`)}
           >
             Apply Now
           </Button>

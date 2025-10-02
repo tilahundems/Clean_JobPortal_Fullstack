@@ -7,7 +7,7 @@ import UploadResume from "./UploadResume";
 import type { ApplicantProfile } from "./applicant.types";
 import { baseURL } from "../../api/axios";
 
-const ApplicantProfile: React.FC = () => {
+const Profile: React.FC = () => {
   const { data: profile, isLoading, isError } = useQuery<ApplicantProfile>({
     queryKey: ["applicantProfile"],
     queryFn: fetchApplicantProfile,
@@ -45,9 +45,9 @@ const ApplicantProfile: React.FC = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-6 bg-gray-50 ">
       <div className="flex justify-center p-6">
-        <div className="w-full max-w-2xl bg-white p-6 shadow-md rounded-xl">
+        <div className="w-full max-w-1xl bg-white p-6 shadow-md rounded-xl">
       <h2 className="text-2xl font-bold mb-6">My Profile</h2>
 
       <Card className="shadow-md rounded-xl mb-6">
@@ -84,4 +84,4 @@ const ApplicantProfile: React.FC = () => {
   );
 };
 
-export default ApplicantProfile;
+export default Profile;

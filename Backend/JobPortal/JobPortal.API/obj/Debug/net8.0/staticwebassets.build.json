@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gYbjDNyYhb7ghuM4r8g5dN3dSzqLrYtXpB0yobMEJgc=",
+  "Hash": "BQgBhnzEaIUuM2KQmP8FNHAc+Qc1mK9PZhB2Q7aCvoE=",
   "Source": "JobPortal.API",
   "BasePath": "_content/JobPortal.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "JobPortal.API\\wwwroot",
       "Source": "JobPortal.API",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\043908b2-4d25-4484-afc8-e32f8b828b4d.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\043908b2-4d25-4484-afc8-e32f8b828b4d.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/043908b2-4d25-4484-afc8-e32f8b828b4d.pdf",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\043908b2-4d25-4484-afc8-e32f8b828b4d.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\0cf805da-4955-435a-b2bb-bc18750b534a.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\0cf805da-4955-435a-b2bb-bc18750b534a.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/0cf805da-4955-435a-b2bb-bc18750b534a.pdf",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\0cf805da-4955-435a-b2bb-bc18750b534a.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\13c2eb07-3a01-4f68-8556-e19f74099650.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\13c2eb07-3a01-4f68-8556-e19f74099650.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/13c2eb07-3a01-4f68-8556-e19f74099650.pdf",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\13c2eb07-3a01-4f68-8556-e19f74099650.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\154d2c55-3749-4b9c-9e0e-00019603609e.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\154d2c55-3749-4b9c-9e0e-00019603609e.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/154d2c55-3749-4b9c-9e0e-00019603609e.pdf",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\154d2c55-3749-4b9c-9e0e-00019603609e.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\1a0994c5-13c1-4dc8-b97d-9a484341544b.docx",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\1a0994c5-13c1-4dc8-b97d-9a484341544b.docx",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/1a0994c5-13c1-4dc8-b97d-9a484341544b.docx",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\1a0994c5-13c1-4dc8-b97d-9a484341544b.docx"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\209662b6-25ad-4bd0-8f78-bc60f13da466.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\209662b6-25ad-4bd0-8f78-bc60f13da466.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/209662b6-25ad-4bd0-8f78-bc60f13da466.pdf",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\209662b6-25ad-4bd0-8f78-bc60f13da466.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\2273d7c0-f0ba-4aa6-8df0-e6a67c067216.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\2273d7c0-f0ba-4aa6-8df0-e6a67c067216.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/2273d7c0-f0ba-4aa6-8df0-e6a67c067216.pdf",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\2273d7c0-f0ba-4aa6-8df0-e6a67c067216.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\2a47756f-11e8-4e6d-9c01-f378ef2f88c9.docx",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\2a47756f-11e8-4e6d-9c01-f378ef2f88c9.docx",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/2a47756f-11e8-4e6d-9c01-f378ef2f88c9.docx",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\2a47756f-11e8-4e6d-9c01-f378ef2f88c9.docx"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\2c3bca66-63e0-45b5-9c18-7024c279f1e2.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\2c3bca66-63e0-45b5-9c18-7024c279f1e2.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/2c3bca66-63e0-45b5-9c18-7024c279f1e2.pdf",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\2c3bca66-63e0-45b5-9c18-7024c279f1e2.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\306a293a-db32-4ebc-98e8-27c7b6cfe1be.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\306a293a-db32-4ebc-98e8-27c7b6cfe1be.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/306a293a-db32-4ebc-98e8-27c7b6cfe1be.pdf",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\306a293a-db32-4ebc-98e8-27c7b6cfe1be.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\306f81c1-42f2-4e62-ba50-fe63c4172a77.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\306f81c1-42f2-4e62-ba50-fe63c4172a77.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/306f81c1-42f2-4e62-ba50-fe63c4172a77.pdf",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\306f81c1-42f2-4e62-ba50-fe63c4172a77.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\317b1746-dd85-4416-a3bc-07ff1c33fde5.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\317b1746-dd85-4416-a3bc-07ff1c33fde5.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/317b1746-dd85-4416-a3bc-07ff1c33fde5.pdf",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\317b1746-dd85-4416-a3bc-07ff1c33fde5.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\34276167-d44b-4f73-9df7-1b06016b535c.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\34276167-d44b-4f73-9df7-1b06016b535c.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/34276167-d44b-4f73-9df7-1b06016b535c.pdf",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\34276167-d44b-4f73-9df7-1b06016b535c.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\3b326f9b-aadb-4556-9c86-d4538fce3819.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\3b326f9b-aadb-4556-9c86-d4538fce3819.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/3b326f9b-aadb-4556-9c86-d4538fce3819.pdf",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\3b326f9b-aadb-4556-9c86-d4538fce3819.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\5235ffb1-8803-4027-a11d-7e39825b15bf.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\5235ffb1-8803-4027-a11d-7e39825b15bf.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/5235ffb1-8803-4027-a11d-7e39825b15bf.pdf",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\5235ffb1-8803-4027-a11d-7e39825b15bf.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\5495a75c-38b6-47af-85be-8954c8f26d2e.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\5495a75c-38b6-47af-85be-8954c8f26d2e.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/5495a75c-38b6-47af-85be-8954c8f26d2e.pdf",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\5495a75c-38b6-47af-85be-8954c8f26d2e.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\5b13618e-16c0-4dbc-9743-83586f78882d.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\5b13618e-16c0-4dbc-9743-83586f78882d.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/5b13618e-16c0-4dbc-9743-83586f78882d.pdf",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\5b13618e-16c0-4dbc-9743-83586f78882d.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\5bdfa639-1cef-4791-bc35-2264953a1614.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\5bdfa639-1cef-4791-bc35-2264953a1614.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/5bdfa639-1cef-4791-bc35-2264953a1614.pdf",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\5bdfa639-1cef-4791-bc35-2264953a1614.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\6026b104-1dc2-43a7-89e6-f57751602685.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\6026b104-1dc2-43a7-89e6-f57751602685.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/6026b104-1dc2-43a7-89e6-f57751602685.pdf",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\6026b104-1dc2-43a7-89e6-f57751602685.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\63f8d68b-548d-4391-a9c8-f9ce8a9ad5e4.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\63f8d68b-548d-4391-a9c8-f9ce8a9ad5e4.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/63f8d68b-548d-4391-a9c8-f9ce8a9ad5e4.pdf",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\63f8d68b-548d-4391-a9c8-f9ce8a9ad5e4.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\6b1410aa-db45-4ee0-a127-30e105f61756.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\6b1410aa-db45-4ee0-a127-30e105f61756.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/6b1410aa-db45-4ee0-a127-30e105f61756.pdf",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\6b1410aa-db45-4ee0-a127-30e105f61756.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\71c04346-9b02-419f-bd5b-4bc91f875868.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\71c04346-9b02-419f-bd5b-4bc91f875868.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/71c04346-9b02-419f-bd5b-4bc91f875868.pdf",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\71c04346-9b02-419f-bd5b-4bc91f875868.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\79fd8d11-f34d-4de0-bb57-9cc3676da4a2.docx",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\79fd8d11-f34d-4de0-bb57-9cc3676da4a2.docx",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/79fd8d11-f34d-4de0-bb57-9cc3676da4a2.docx",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\79fd8d11-f34d-4de0-bb57-9cc3676da4a2.docx"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\88094358-21c4-482a-bc57-5bd92dda0cc9.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\88094358-21c4-482a-bc57-5bd92dda0cc9.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/88094358-21c4-482a-bc57-5bd92dda0cc9.pdf",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\88094358-21c4-482a-bc57-5bd92dda0cc9.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\90d01e95-5cb3-4c8c-83f4-add0c359b3f3.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\90d01e95-5cb3-4c8c-83f4-add0c359b3f3.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/90d01e95-5cb3-4c8c-83f4-add0c359b3f3.pdf",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\90d01e95-5cb3-4c8c-83f4-add0c359b3f3.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\a1fc226b-c818-43d9-aa6d-b0d5c4cb444f.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\a1fc226b-c818-43d9-aa6d-b0d5c4cb444f.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/a1fc226b-c818-43d9-aa6d-b0d5c4cb444f.pdf",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\a1fc226b-c818-43d9-aa6d-b0d5c4cb444f.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\a2ddeae3-f466-4d8b-a047-6e434ba04b25.docx",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\a2ddeae3-f466-4d8b-a047-6e434ba04b25.docx",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/a2ddeae3-f466-4d8b-a047-6e434ba04b25.docx",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\a2ddeae3-f466-4d8b-a047-6e434ba04b25.docx"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\a88e8717-4bc8-47a7-8dc4-f6120a575418.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\a88e8717-4bc8-47a7-8dc4-f6120a575418.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/a88e8717-4bc8-47a7-8dc4-f6120a575418.pdf",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\a88e8717-4bc8-47a7-8dc4-f6120a575418.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\b6f13443-5d20-40e3-aab4-ab1c8a89238f.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\b6f13443-5d20-40e3-aab4-ab1c8a89238f.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/b6f13443-5d20-40e3-aab4-ab1c8a89238f.pdf",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\b6f13443-5d20-40e3-aab4-ab1c8a89238f.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\b73b6445-daa9-46ee-8995-637bb8ce4304.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\b73b6445-daa9-46ee-8995-637bb8ce4304.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/b73b6445-daa9-46ee-8995-637bb8ce4304.pdf",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\b73b6445-daa9-46ee-8995-637bb8ce4304.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\c873685f-ee23-475e-932d-bd158146fa52.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\c873685f-ee23-475e-932d-bd158146fa52.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/c873685f-ee23-475e-932d-bd158146fa52.pdf",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\c873685f-ee23-475e-932d-bd158146fa52.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\cc81efa7-dfd1-498f-be8c-007f780e5090.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\cc81efa7-dfd1-498f-be8c-007f780e5090.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/cc81efa7-dfd1-498f-be8c-007f780e5090.pdf",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\cc81efa7-dfd1-498f-be8c-007f780e5090.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\d345aa2a-6db5-41f5-8a04-a0b7c09a9a6c.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\d345aa2a-6db5-41f5-8a04-a0b7c09a9a6c.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/d345aa2a-6db5-41f5-8a04-a0b7c09a9a6c.pdf",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\d345aa2a-6db5-41f5-8a04-a0b7c09a9a6c.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\d3a5bbe2-5a95-458c-bd40-36ae81934bb4.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\d3a5bbe2-5a95-458c-bd40-36ae81934bb4.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/d3a5bbe2-5a95-458c-bd40-36ae81934bb4.pdf",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\d3a5bbe2-5a95-458c-bd40-36ae81934bb4.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\da710166-d535-49f6-b26d-5c063b3fb09d.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\da710166-d535-49f6-b26d-5c063b3fb09d.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/da710166-d535-49f6-b26d-5c063b3fb09d.pdf",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\da710166-d535-49f6-b26d-5c063b3fb09d.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\dbde49af-e6e5-4c21-88c8-298580eefcf5.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\dbde49af-e6e5-4c21-88c8-298580eefcf5.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/dbde49af-e6e5-4c21-88c8-298580eefcf5.pdf",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\dbde49af-e6e5-4c21-88c8-298580eefcf5.pdf"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\f70f4d29-3260-450a-bd20-03aed401dab2.docx",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\f70f4d29-3260-450a-bd20-03aed401dab2.docx",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/f70f4d29-3260-450a-bd20-03aed401dab2.docx",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\resumes\\f70f4d29-3260-450a-bd20-03aed401dab2.docx"
     },
     {
-      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf",
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\resumes\\fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\wwwroot\\",
       "BasePath": "_content/JobPortal.API",
       "RelativePath": "resumes/fea1bd0f-eed7-465b-bdbd-209900b9165a.pdf",
       "AssetKind": "All",
