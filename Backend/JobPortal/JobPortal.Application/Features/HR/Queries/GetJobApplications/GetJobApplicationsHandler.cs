@@ -23,7 +23,25 @@ public class GetJobApplicationsHandler : IRequestHandler<GetJobApplicationsQuery
             JobId = a.JobId,
             Status = a.Status,
             CoverLetter = a.CoverLetter,
-            AppliedDate = a.AppliedDate
+            AppliedDate = a.AppliedDate,
+            ApplicantProfile = a.ApplicantProfile == null ? null : new ApplicantProfileDto
+            {
+                FullName = a.ApplicantProfile.FullName,
+                Education = a.ApplicantProfile.Education,
+                Phone = a.ApplicantProfile.Phone,
+                ResumeUrl = a.ApplicantProfile.ResumeUrl,
+                Skills = a.ApplicantProfile.Skills
+            },
+            Job = a.Job ==null ? null: new JobDto
+            {
+                Description = a.Job.Description,
+                ExpiryDate= a.Job.ExpiryDate,
+                Location=a.Job.Location,
+                Title=a.Job.Title,
+                PostedDate=a.Job.PostedDate
+            },
+            
+            
         }).ToList();
     }
 }

@@ -18,7 +18,7 @@ export default function AppHeader({ onToggle }: Props) {
         onClick={onToggle}
       />
       {/* <h1 className="text-lg font-bold">Job Portal</h1> */}
-      <div>Right-side actions (user menu, logout, etc.)</div>
+      {/* <div>Right-side actions (user menu, logout, etc.)</div> */}
     </Header>
   );
 }

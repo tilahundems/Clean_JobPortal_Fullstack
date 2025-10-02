@@ -25,5 +25,16 @@ public class UpdateJobHandler : IRequestHandler<UpdateJobCommand, bool>
 
         var updated = await _jobService.UpdateJobAsync(jobEntity, ct);
         return updated != null;
+    //       var jobEntity = await _jobService.GetJobAsync(request.Id, ct);
+    //    if (jobEntity == null) return false;
+
+    //     jobEntity.Title = request.Title;
+    //     jobEntity.Description = request.Description;
+    //     jobEntity.Location = request.Location;
+    //     jobEntity.ExpiryDate = request.ExpiryDate;
+
+         
+    //     var updated = await _jobService.UpdateJobAsync(jobEntity, ct);
+    //     return updated != null;
     }
 }

@@ -1,28 +1,53 @@
-import React from "react";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { fetchJobById, updateJob } from "../jobs/jobs.service";
+import React, { useEffect } from "react";
 import { Form, Input, Select, DatePicker, Button, message, Row, Col } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 
 const { Option } = Select;
 
 const EditJob: React.FC = () => {
   const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
   const [form] = Form.useForm();
 
-  const job = {
-    id: 1,
-    title: "Frontend Developer",
-    company: "Abay Tech",
-    location: "Addis Ababa",
-    type: "Full-Time",
-    deadline: "2025-09-30",
-    description: "Edit job description here...",
-  };
+
+  // Fetch job details
+  const { data: job, isLoading } = useQuery({
+    queryKey: ["job", id],
+    queryFn: () => fetchJobById(id? id : ""),
+    enabled: !!id,
+  });  
+
+   // Mutation for update
+  const mutation = useMutation({
+    mutationFn: (updated: any) => updateJob(id? id : "" , updated),
+    onSuccess: () => {
+      message.success("Job updated successfully!");
+      navigate("/ManageJobs");
+    },
+    onError: (err: any) => {
+      message.error(err.response?.data?.message || "Job update failed");
+    },
+  });
+
+ // Sync job data into form when fetched
+  useEffect(() => {
+    if (job) {
+      form.setFieldsValue({
+        ...job,
+        ExpiryDate: dayjs(job.expiryDate),
+      });
+    }
+  }, [job, form]);
 
   const onFinish = (values: any) => {
-    console.log("Updated job:", values);
-    message.success("Job updated successfully!");
-    navigate("/ManageJobs");
+    mutation.mutate({
+      ...values,
+          Id: id, 
+     ExpiryDate : values.ExpiryDate.format("YYYY-MM-DD"),
+    });
   };
 
   return (
@@ -35,7 +60,7 @@ const EditJob: React.FC = () => {
           layout="vertical"
           initialValues={{
             ...job,
-            deadline: dayjs(job.deadline),
+            deadline: dayjs(job?.expiryDate),
           }}
           onFinish={onFinish}
         >
@@ -50,15 +75,6 @@ const EditJob: React.FC = () => {
               </Form.Item>
             </Col>
 
-            <Col xs={24} md={12}>
-              <Form.Item
-                label="Company"
-                name="company"
-                rules={[{ required: true, message: "Please input company name" }]}
-              >
-                <Input size="middle" />
-              </Form.Item>
-            </Col>
 
             <Col xs={24} md={12}>
               <Form.Item
@@ -70,7 +86,7 @@ const EditJob: React.FC = () => {
               </Form.Item>
             </Col>
 
-            <Col xs={24} md={12}>
+            {/* <Col xs={24} md={12}>
               <Form.Item
                 label="Job Type"
                 name="type"
@@ -82,12 +98,12 @@ const EditJob: React.FC = () => {
                   <Option value="Internship">Internship</Option>
                 </Select>
               </Form.Item>
-            </Col>
+            </Col> */}
 
             <Col xs={24} md={12}>
               <Form.Item
                 label="Deadline"
-                name="deadline"
+                name="ExpiryDate"
                 rules={[{ required: true, message: "Please select deadline" }]}
               >
                 <DatePicker

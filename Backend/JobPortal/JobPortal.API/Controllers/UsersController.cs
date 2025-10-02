@@ -29,9 +29,9 @@ public class UsersController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
                 
-                 var success = await _mediator.Send(new LoginUserCommand(dto.Email, dto.Password, dto.RememberMe));
-                if (!success) return Unauthorized("Invalid credentials.");
-                return Ok(new { message = "Logged in" });
+                 var Res = await _mediator.Send(new LoginUserCommand(dto.Email, dto.Password, dto.RememberMe));
+                if (Res == null ) return Unauthorized("Invalid credentials.");
+                return Ok(new { message = "Logged in" ,Res});
   
     }
  

@@ -3,7 +3,6 @@
 // For returning user info (without password)
 public record UserDto(
     Guid Id,
-    string FullName,
     string Email,
     string Role
 );

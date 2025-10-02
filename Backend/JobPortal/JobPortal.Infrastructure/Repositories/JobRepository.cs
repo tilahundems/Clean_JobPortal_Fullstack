@@ -51,6 +51,7 @@ public class JobRepository: IJobRepository
             .Where(a => a.JobId == jobId)
             .Include(a => a.ApplicantProfile)
             .OrderByDescending(a => a.AppliedDate)
+            .Include(a=> a.Job)
             .ToListAsync(ct);
 
 }

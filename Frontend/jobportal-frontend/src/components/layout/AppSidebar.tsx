@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+
+
+import React, { useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -6,9 +8,14 @@ import {
   DashboardOutlined,
   SolutionOutlined,
   ProfileOutlined,
+  LoginOutlined,
+  LogoutOutlined,PlusOutlined,ToolOutlined
 } from "@ant-design/icons";
+import { RiRegisteredFill } from "react-icons/ri";
+import { useAuth } from "../../app/AuthContext";
 
 const { Sider } = Layout;
+
 interface Props {
   collapsed: boolean;
   onCollapse: (val: boolean) => void;
@@ -18,152 +25,135 @@ export default function AppSidebar({ collapsed, onCollapse }: Props) {
   const navigate = useNavigate();
   const loc = useLocation();
 
+
+const { user,logout } = useAuth();
+const role = user?.role;
+console.log(`Role-> ${role}`);
+
+  // Define menu items
+  const commonItems = [
+    {
+      key: "/",
+      label: "Home",
+      icon: <HomeOutlined />,
+      onClick: () => navigate("/"),
+    },
+    {
+      key: "/jobs",
+      label: "Jobs",
+      icon: <ProfileOutlined />,
+      onClick: () => navigate("/jobs"),
+    },
+    
+  ];
+
+  const auth =[
+    {
+      key: "/login",
+      label: "Login",
+      icon: <LoginOutlined />,
+      onClick: () => navigate("/login"),
+    },
+    {
+      key: "/register",
+      label: "Register",
+      icon: <RiRegisteredFill />,
+      onClick: () => navigate("/register"),
+    },
+  ]
+
+  const hrItems = [
+    {
+      key: "/AdminDashboard",
+      label: "Admin Dashboard",
+      icon: <DashboardOutlined />,
+      onClick: () => navigate("/AdminDashboard"),
+    },
+    {
+      key: "/create",
+      label: "Create Job",
+      icon: <PlusOutlined />,
+      onClick: () => navigate("/create"),
+    },
+    {
+      key: "/ManageJobs",
+      label: "Manage Jobs",
+      icon: <ToolOutlined />,
+      onClick: () => navigate("/ManageJobs"),
+    },
+  
+  ];
+
+  const applicantItems = [
+    {
+      key: "/Dashboard",
+      label: "Dashboard",
+      icon: <DashboardOutlined />,
+      onClick: () => navigate("/ApplicanDashboard"),
+    },
+    {
+      key: "/profile",
+      label: "Profile",
+      icon: <ProfileOutlined />,
+      onClick: () => navigate("/profile"),
+    },
+    {
+      key: "/createProfile",
+      label: "Create Profile",
+      icon: <SolutionOutlined />,
+      onClick: () => navigate("/createProfile"),
+    },
+    {
+      key: "/apps",
+      label: "Applications",
+      icon: <SolutionOutlined />,
+      onClick: () => navigate("/apps"),
+    },
+  ];
+
+  const logoutItem = user
+  ? [
+      {
+        key: "/logout",
+        label: "Logout",
+        icon: <LogoutOutlined />,
+        onClick: async () => {
+          await logout();
+          navigate("/login"); // redirect after logout
+        },
+      },
+    ]
+  : [];
+
   return (
-      <Sider 
+    <Sider
       collapsible
       collapsed={collapsed}
       onCollapse={onCollapse}
       breakpoint="md"
-      collapsedWidth={80}
-       trigger={null}   
-      
-    
+      collapsedWidth={50}
+      trigger={null}
     >
-
       {/* Logo */}
       <div className="text-white text-xl p-4 text-center">
         {collapsed ? "JP" : "JobPortal"}
       </div>
 
       {/* Menu */}
-    <Menu
+      <Menu
         theme="dark"
         mode="inline"
-        selectedKeys={[loc.pathname]} > 
+        selectedKeys={[loc.pathname]}
+        items={[
+           
+          ...(role === "HR" ? hrItems : []),
+          ...(role != "HR" ? commonItems :[]),
+          ...(role === "Applicant" ? applicantItems : []),
+         ...(role ? logoutItem : auth), // show logout if logged in, otherwise login/register
 
-         
-        <Menu.Item
-          key="/home"
-          icon={<HomeOutlined />}
-          onClick={() => navigate("/home")}
-        >
-          Home
-        </Menu.Item>
-        <Menu.Item
-          key="/jobs"
-          icon={<ProfileOutlined />}
-          onClick={() => navigate("/jobs")}
-        >
-          Jobs
-        </Menu.Item>
-       
-        
-        <Menu.Item
-          key="/login"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/login")}
-        >
-          Login
-        </Menu.Item>
-        <Menu.Item
-          key="/register"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/register")}
-        >
-          Register
-        </Menu.Item>
-
-
-        {/* Hr Section */}
-          <Menu.Item
-          key="/"
-          icon={<DashboardOutlined />}
-          onClick={() => navigate("/")}
-        >
-          Dashboard
-        </Menu.Item>
-        
-        <Menu.Item
-          key="/create"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/create")}
-        >
-       Create Job
-        </Menu.Item> 
-        
-          <Menu.Item
-          key="/applications"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/applications")}
-        >
-          Applications
-        </Menu.Item> 
-        
-        
-        
-         <Menu.Item
-          key="/ManageJobs"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/ManageJobs")}
-        >
-        ManageJobs
-        </Menu.Item>
-
-
-
-
-
-
-        {/* Applicant Section */}
-      <Menu.Item
-          key="/apply"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/apply")}
-        >
-        Apply
-        </Menu.Item>   
-        
-        <Menu.Item
-          key="/profile"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/profile")}
-        >
-        Profile
-        </Menu.Item> 
-        
-        <Menu.Item
-          key="/profile/reseume"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/profile/reseume")}
-        >
-        upload  Resume
-        </Menu.Item> 
-        
-        <Menu.Item
-          key="/dashboard"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/dashboard")}
-        >
-        Dashboard
-        </Menu.Item>
-         <Menu.Item
-          key="/apps"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/apps")}
-        >
-        Applications
-        </Menu.Item>
-        
-        
-         <Menu.Item
-          key="/createProfile"
-          icon={<SolutionOutlined />}
-          onClick={() => navigate("/createProfile")}
-        >
-        Create Profile
-        </Menu.Item>
-    
-      </Menu>
+          
+        ]}
+      />
     </Sider>
   );
 }

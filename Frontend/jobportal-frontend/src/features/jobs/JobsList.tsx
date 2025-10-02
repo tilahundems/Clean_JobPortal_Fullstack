@@ -1,59 +1,119 @@
 import React from "react";
-import { Card, Button, Row, Col, Tag } from "antd";
-import {
-  CalendarOutlined,
-  UserOutlined,
-  EnvironmentOutlined,
-} from "@ant-design/icons";
+import { Card, Button, Row, Col, Tag, Skeleton, Empty, message } from "antd";
+import { CalendarOutlined, UserOutlined, EnvironmentOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-
-type Job = {
-  id: number;
-  title: string;
-  location: string;
-  type: string;
-  company: string;
-  deadline: string;
-  description: string;
-};
-
-const demoJobs: Job[] = [
-  {
-    id: 1,
-    title: "Frontend Developer",
-    location: "Addis Ababa",
-    type: "Full-Time",
-    company: "Abay Tech",
-    deadline: "2025-09-30T23:59:59",
-    description:
-      "We are looking for a talented frontend developer with React experience...",
-  },
-  {
-    id: 2,
-    title: "Backend Developer",
-    location: "Addis Ababa",
-    type: "Full-Time",
-    company: "Abay Tech",
-    deadline: "2025-10-05T23:59:59",
-    description: "Looking for a skilled .NET developer for API development...",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { fetchJobs } from "../../features/jobs/jobs.service";
+import type { JobDto } from "../../features/jobs/job.types";
 
 export default function JobList() {
   const navigate = useNavigate();
 
+  const {
+  data: jobs,
+  isLoading,
+  isError,
+  error,
+} = useQuery<JobDto[], Error>({
+  queryKey: ["jobs"],
+  queryFn: fetchJobs
+});
+
+  if (isLoading) {
+    return (
+      <div className="p-6">
+        <h1 className="text-2xl font-bold mb-6">Available Jobs</h1>
+        <Row gutter={[16, 16]}>
+          {Array.from({ length: 6 }).map((_, i) => (
+            <Col key={i} xs={24} sm={12} md={8}>
+              <Card className="shadow-md">
+                <Skeleton active paragraph={{ rows: 4 }} />
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    );
+  }
+
+  if (isError || !jobs || jobs === null) {
+    return (
+      <div className="p-6">
+        <h1 className="text-2xl font-bold mb-6">Available Jobs</h1>
+        <Empty description="No jobs available or failed to load" />
+      </div>
+    );
+  }
+
   return (
-    <div className="p-6">
+    <>
+    
+    {/* <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Available Jobs</h1>
       <Row gutter={[16, 16]}>
-        {demoJobs.map((job) => (
+        {jobs.map((job) => (
+          <Col key={job.id} xs={24} sm={12} md={8}>
+            <Card
+              style={{ animation: "fadeInUp 300ms" }}
+              title={
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold">{job.title}</span>
+                  <Tag color="blue">{job.type ?? "N/A"}</Tag>
+                </div>
+              }
+              bordered={true}
+              className="shadow-md hover:shadow-xl transition-all"
+            >
+              <p
+                className="mb-4 text-gray-600"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
+                {job.description ?? "No description provided."}
+              </p>
+
+              <div className="flex flex-wrap gap-x-4 text-sm text-gray-500 mb-4">
+                <span className="flex items-center gap-1">
+                  <CalendarOutlined />{" "}
+                  {job.expiryDate ? new Date(job.expiryDate).toLocaleDateString() : "—"}
+                </span>
+                <span className="flex items-center gap-1">
+                  <UserOutlined /> {job.company ?? "—"}
+                </span>
+                <span className="flex items-center gap-1">
+                  <EnvironmentOutlined /> {job.location ?? "—"}
+                </span>
+              </div>
+
+              <Button
+                className="bg-[rgb(65,176,232)]"
+                onClick={() => navigate(`/jobs/${job.id}`)}
+                block
+                size="large"
+              >
+                View Details
+              </Button>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </div> */}
+
+<div className="p-6">
+      <h1 className="text-2xl font-bold mb-6">Available Jobs</h1>
+      <Row gutter={[16, 16]}>
+        {jobs.map((job) => (
           <Col key={job.id} xs={24} sm={12} md={8}>
             <Card
              style={{ animation: "fadeInUp 900ms " }}
               title={
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">{job.title}</span>
-                  <Tag color="blue">{job.type}</Tag>
+                <div className="flex justify-between items-center ">
+                  <span className="font-semibold ">{job.title}</span>
+                  {/* <Tag color="blue" className="mr-10">{job.location}</Tag> */}
                 </div>
               }
               bordered={true}
@@ -66,7 +126,7 @@ export default function JobList() {
               <div className="flex flex-wrap gap-x-4 text-sm text-gray-500 mb-4">
                 <span className="flex items-center gap-1">
                   <CalendarOutlined />{" "}
-                  {new Date(job.deadline).toLocaleDateString()}
+           {job.expiryDate ? new Date(job.expiryDate).toLocaleDateString() : "—"}
                 </span>
                 <span className="flex items-center gap-1">
                   <UserOutlined /> {job.company}
@@ -88,7 +148,7 @@ export default function JobList() {
           </Col>
         ))}
       </Row>
-    </div>
+    </div></>
+    
   );
 }
-

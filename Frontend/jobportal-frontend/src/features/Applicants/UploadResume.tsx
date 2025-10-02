@@ -1,31 +1,83 @@
-// src/features/applicants/UploadResume.tsx
 import React from "react";
 import { Upload, message, Card } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
-
+import { type RcFile,  } from "antd/es/upload";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import {type AxiosProgressEvent } from "axios";
+import { api } from "../../api/axios";
+import type { ApplicantProfile } from "./applicant.types";
+import { uploadResume } from "./applicant.service";
 const { Dragger } = Upload;
 
-const UploadResume: React.FC = () => {
-  const props = {
-    name: "file",
-    multiple: false,
-    accept: ".pdf,.doc,.docx",
-    action: "/api/upload/resume", // backend endpoint later
-    onChange(info: any) {
-      const { status } = info.file;
-      if (status === "done") {
-        message.success(`${info.file.name} file uploaded successfully.`);
-      } else if (status === "error") {
-        message.error(`${info.file.name} file upload failed.`);
+
+type UploadPayload = {
+  formData: FormData;
+  onUploadProgress?: (progressEvent: AxiosProgressEvent) => void;
+};
+
+
+interface UploadResumeProps {
+    onUploaded?: (resumeUrl: string) => void;  
+    profileId: string;
+
+}
+
+const UploadResume: React.FC<UploadResumeProps> = ({ profileId, onUploaded }) => {
+  
+  
+  const queryClient = useQueryClient();
+ const mutation = useMutation<ApplicantProfile, Error, UploadPayload & { profileId: string } >({
+  mutationFn: 
+  (payload) =>
+    uploadResume({
+      ...payload,   // includes formData & onUploadProgress
+      profileId,    // add profileId here
+    }),
+  onSuccess: (updatedProfile) => {
+    message.success("Resume uploaded successfully.");
+    queryClient.invalidateQueries({ queryKey: ["applicantProfile"] });
+    if (updatedProfile.resumeUrl) {
+        // onUploaded?.(updatedProfile.resumeUrl);
+       onUploaded?.(updatedProfile.resumeUrl || "");  
       }
-    },
+      else {
+    onUploaded?.(""); // still close modal even if no URL
+  }
+  },
+  onError: (err: any) => {
+    message.error(err?.response?.data?.message || "Resume upload failed.");
+  },
+});
+
+
+  const customRequest = (options: any) => {
+    const { file, onProgress, onSuccess, onError } = options;
+    const fd = new FormData();
+    fd.append("file", file as RcFile);
+    mutation.mutate({
+      formData: fd,
+      onUploadProgress: (ev) => {
+        if (onProgress && ev.total) {
+          const percent = Math.round((ev.loaded / ev.total) * 100);
+          onProgress({ percent });
+        }
+      },
+      profileId,
+    });
   };
+
+  
+ 
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
       <h2 className="text-2xl font-bold mb-6">Upload Resume</h2>
       <Card className="shadow-md rounded-xl">
-        <Dragger {...props}>
+        <Dragger
+          customRequest={customRequest}
+          accept=".pdf,.doc,.docx"
+          multiple={false}
+        >
           <p className="ant-upload-drag-icon">
             <InboxOutlined />
           </p>
@@ -38,3 +90,8 @@ const UploadResume: React.FC = () => {
 };
 
 export default UploadResume;
+
+
+
+
+

@@ -74,12 +74,10 @@ public class HrJobsController : ControllerBase
     public async Task<IActionResult> GetJobApplications(Guid jobId, CancellationToken ct)
     {
          if (CurrentUserId is null) return Unauthorized(new { message = "Invalid user. Please log in." });
-    //    var job = await _jobService.GetJobAsync(jobId, ct);
 
             var query = new GetJobApplicationsQuery(jobId);
                     var apps = await _mediator.Send(query, ct);
                     if (apps == null) return NotFound(new {message = "Job not found"});
-    //    var apps = await _jobService.GetJobApplicationsAsync(jobId);
         return Ok(apps);
     }
 }

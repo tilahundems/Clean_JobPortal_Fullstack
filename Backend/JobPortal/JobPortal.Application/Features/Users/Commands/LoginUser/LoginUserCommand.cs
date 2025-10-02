@@ -1,5 +1,6 @@
-﻿using MediatR;
+﻿using JobPortal.Domain;
+using MediatR;
 namespace JobPortal.Application;
 
-public record LoginUserCommand(string Email, string Password, bool RememberMe) : IRequest<bool>;
+public record LoginUserCommand(string Email, string Password, bool RememberMe) : IRequest<UserDto?>;
 

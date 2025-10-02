@@ -1,25 +1,63 @@
-
+// CreateJob.tsx
+import { useMutation } from "@tanstack/react-query";
+import { createJob } from "../jobs/jobs.service";
 import React from "react";
-import { Form, Input, Select, DatePicker, Button, message, Row, Col } from "antd";
+import {
+  Form,
+  Input,
+  Select,
+  DatePicker,
+  Button,
+  message,
+  Row,
+  Col,
+} from "antd";
 import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
+import type { createJobPayload } from "../jobs/job.types";
 
 const { Option } = Select;
 
 const CreateJob: React.FC = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+  // Mutation hook
+  const mutation = useMutation({
+    mutationFn: createJob,
+    onSuccess: () => {
+      message.success("Job created successfully!");
+      setTimeout(() => {
+        navigate("/ManageJobs");
+      }, 1000);
+
+     
+    },
+    onError: (err: any) => {
+      message.error(err.response?.data?.message || "Job creation failed");
+    },
+  });
 
   const onFinish = (values: any) => {
-    console.log("New Job Created:", values);
-    message.success("Job created successfully!");
-    navigate("/ManageJobs"); // redirect to ManageJobs page
+    if (mutation.isPending) return;
+    const payload: createJobPayload = {
+      Title: values.title,
+      Location: values.location,
+      ExpiryDate: values.deadline.format("YYYY-MM-DD"),
+      Description: values.description,
+      PostedById: user?.id || undefined,
+    };
+
+    mutation.mutate(payload);
   };
 
   return (
     <div className="p-4 bg-gray-50 min-h-screen flex justify-center">
       <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-3xl">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Create Job</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+          Create Job
+        </h1>
 
         <Form form={form} layout="vertical" onFinish={onFinish}>
           <Row gutter={16}>
@@ -82,7 +120,9 @@ const CreateJob: React.FC = () => {
                   className="w-full"
                   size="middle"
                   format="YYYY-MM-DD"
-                  disabledDate={(current) => current && current < dayjs().startOf("day")}
+                  disabledDate={(current) =>
+                    current && current < dayjs().startOf("day")
+                  }
                 />
               </Form.Item>
             </Col>
@@ -92,18 +132,30 @@ const CreateJob: React.FC = () => {
               <Form.Item
                 label="Description"
                 name="description"
-                rules={[{ required: true, message: "Please enter job description" }]}
+                rules={[
+                  { required: true, message: "Please enter job description" },
+                ]}
               >
-                <Input.TextArea rows={4} placeholder="Write job description here..." />
+                <Input.TextArea
+                  rows={4}
+                  placeholder="Write job description here..."
+                />
               </Form.Item>
             </Col>
           </Row>
 
           {/* Submit Button */}
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full md:w-auto">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="w-full md:w-auto"
+              loading={mutation.status==="pending"}
+              disabled={mutation.isPending}
+            >
               Create Job
             </Button>
+          
           </Form.Item>
         </Form>
       </div>
