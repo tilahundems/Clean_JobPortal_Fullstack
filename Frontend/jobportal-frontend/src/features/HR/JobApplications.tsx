@@ -91,11 +91,7 @@ const JobApplications: React.FC = () => {
       key: "applicantName",
       sorter: (a, b) => a.applicantName.localeCompare(b.applicantName),
     },
-    // {
-    //   title: "Email",
-    //   dataIndex: "email",
-    //   key: "email",
-    // },
+   
     {
       title: "Job Title",
       dataIndex: "jobTitle",

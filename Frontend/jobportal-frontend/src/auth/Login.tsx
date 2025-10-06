@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Form, Input, Button, Checkbox, message } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
@@ -49,7 +48,7 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center p-4 ">
       <Card className="w-full max-w-md shadow-lg" style={{ animation: "fadeInUp 900ms" }}>
-      
+      {contextHolder}
 
         <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
         <h2 className="text-center mb-2">Welcome Back</h2>

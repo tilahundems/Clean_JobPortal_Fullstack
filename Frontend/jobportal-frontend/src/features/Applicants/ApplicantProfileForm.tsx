@@ -6,8 +6,6 @@ import {
   Select,
   Spin,
   Modal,
-  Card,
-  Upload,
   message,
 } from "antd";
 import {

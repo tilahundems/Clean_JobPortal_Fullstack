@@ -1,7 +1,3 @@
-
-
-
-import React from "react";
 import { Card, Form, Input, Button, message } from "antd";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";

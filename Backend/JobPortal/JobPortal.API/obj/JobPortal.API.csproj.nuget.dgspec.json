@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\JobPortal.API.csproj": {}
+    "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\JobPortal.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\JobPortal.API.csproj": {
+    "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\JobPortal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\JobPortal.API.csproj",
+        "projectUniqueName": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\JobPortal.API.csproj",
         "projectName": "JobPortal.API",
-        "projectPath": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\JobPortal.API.csproj",
+        "projectPath": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\JobPortal.API.csproj",
         "packagesPath": "C:\\Users\\dtilahun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.api\\obj\\",
+        "outputPath": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dtilahun\\AppData\\Roaming\\NuGet\\NuGet.Config"

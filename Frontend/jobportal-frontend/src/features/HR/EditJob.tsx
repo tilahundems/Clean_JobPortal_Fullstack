@@ -1,11 +1,11 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { fetchJobById, updateJob } from "../jobs/jobs.service";
 import React, { useEffect } from "react";
-import { Form, Input, Select, DatePicker, Button, message, Row, Col } from "antd";
+import { Form, Input, DatePicker, Button, message, Row, Col, Spin } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 
-const { Option } = Select;
+// const { Option } = Select;
 
 const EditJob: React.FC = () => {
   const navigate = useNavigate();
@@ -54,6 +54,10 @@ const EditJob: React.FC = () => {
     });
   };
 
+  if(isLoading)
+  {
+      <Spin  className="flex flex-center justify-center" />
+  }
   return (
     <div className="p-4 bg-gray-50 min-h-screen flex justify-center">
       <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-3xl">

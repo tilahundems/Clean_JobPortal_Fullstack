@@ -1,5 +1,4 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import JobsList from "../features/jobs/JobsList";
 import HrDashboard from "../pages/HRDashboard";

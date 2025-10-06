@@ -4,7 +4,6 @@ import { InboxOutlined } from "@ant-design/icons";
 import { type RcFile,  } from "antd/es/upload";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {type AxiosProgressEvent } from "axios";
-import { api } from "../../api/axios";
 import type { ApplicantProfile } from "./applicant.types";
 import { uploadResume } from "./applicant.service";
 const { Dragger } = Upload;
@@ -51,7 +50,7 @@ const UploadResume: React.FC<UploadResumeProps> = ({ profileId, onUploaded }) =>
 
 
   const customRequest = (options: any) => {
-    const { file, onProgress, onSuccess, onError } = options;
+    const { file, onProgress } = options;
     const fd = new FormData();
     fd.append("file", file as RcFile);
     mutation.mutate({

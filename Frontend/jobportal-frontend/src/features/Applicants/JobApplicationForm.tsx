@@ -41,6 +41,7 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
       onApplied?.();
       form.resetFields();
        setTimeout(() => {
+        console.log(data);
         navigate("/apps");
       }, 1500);
        

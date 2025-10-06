@@ -1,6 +1,3 @@
-
-
-import React, { useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -13,7 +10,7 @@ import {
   DatabaseFilled,BoxPlotOutlined
 } from "@ant-design/icons";
 import { useAuth } from "../../app/AuthContext";
-import sitelogo from "../../../public/imgs/sitelogo.png";
+import sitelogo from "../../assets/imgs/sitelogo.png";
 
 const { Sider } = Layout;
 

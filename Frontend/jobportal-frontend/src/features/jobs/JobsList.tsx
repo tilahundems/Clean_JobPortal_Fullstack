@@ -1,6 +1,5 @@
-import React from "react";
-import { Card, Button, Row, Col, Tag, Skeleton, Empty, message, Typography } from "antd";
-import { CalendarOutlined, UserOutlined, EnvironmentOutlined } from "@ant-design/icons";
+import { Card, Button, Row, Col,  Skeleton, Empty,  Typography } from "antd";
+import { CalendarOutlined,  EnvironmentOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchJobs } from "../../features/jobs/jobs.service";
@@ -13,7 +12,7 @@ export default function JobList() {
   data: jobs,
   isLoading,
   isError,
-  error,
+  
 } = useQuery<JobDto[], Error>({
   queryKey: ["jobs"],
   queryFn: fetchJobs

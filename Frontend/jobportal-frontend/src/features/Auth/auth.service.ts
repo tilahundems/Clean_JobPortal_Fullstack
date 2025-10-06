@@ -1,4 +1,6 @@
+import axios from "axios";
 import { api } from "../../api/axios";
+import { useAuth } from "../../app/AuthContext";
 
 interface LoginPayload {
   email: string;
@@ -46,12 +48,14 @@ export const register = async (payload: RegisterPayload): Promise<RegisterRespon
 };
 
 
-const logout = async () => {
+export const logout = async () => {
+  // const {setUser} =useAuth()
+
   try {
     await axios.post("/logout", {}, { withCredentials: true }); // call backend
   } catch (err) {
     console.error("Logout failed", err);
   } finally {
-    setUser(null); // clear local storage + context
+    // setUser(null); // clear local storage + context
   }
 };

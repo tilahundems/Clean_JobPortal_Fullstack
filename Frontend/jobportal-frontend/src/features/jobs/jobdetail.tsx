@@ -1,8 +1,7 @@
 
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Card, Button, Tag, Skeleton, message, Empty } from "antd";
-import { CalendarOutlined, UserOutlined, EnvironmentOutlined } from "@ant-design/icons";
+import { Card, Button, Tag, Skeleton,  Empty } from "antd";
+import { CalendarOutlined,  EnvironmentOutlined } from "@ant-design/icons";
 import { useQuery } from "@tanstack/react-query";
 import { fetchJobById } from "../../features/jobs/jobs.service";
 import type { JobDto } from "../../features/jobs/job.types";

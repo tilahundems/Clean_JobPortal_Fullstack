@@ -8,14 +8,16 @@ const Applications: React.FC = () => {
   const { data: applications = [], isLoading, isError } = useQuery<Application[]>({
     queryKey: ["myApplications"],
     queryFn: fetchMyApplications,
+    
   });
+   
 
   const columns = [
     { 
       title: "Job Title", 
       dataIndex: ["job", "title"], 
-      key: "jobTitle", 
-      render: (title: string, record: Application) => record.job?.title || "-" 
+      key: "title", 
+      render: ( record: Application) => record.job?.title || "-" 
     },
     { 
       title: "Location", 

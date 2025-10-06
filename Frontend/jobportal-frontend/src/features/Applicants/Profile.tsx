@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchApplicantProfile } from "./applicant.service";
-import { Card, Descriptions, Button, Spin, Empty, Modal } from "antd";
-import { DownloadOutlined, UploadOutlined } from "@ant-design/icons";
-import UploadResume from "./UploadResume";
+import { Card, Descriptions,  Spin } from "antd";
 import type { ApplicantProfile } from "./applicant.types";
 import { baseURL } from "../../api/axios";
 
@@ -13,7 +11,7 @@ const Profile: React.FC = () => {
     queryFn: fetchApplicantProfile,
   });
 
-  const [showUploadModal, setShowUploadModal] = useState(false);
+  // const [showUploadModal, setShowUploadModal] = useState(false);
 
   if (isLoading) {
     return (
@@ -35,14 +33,14 @@ const Profile: React.FC = () => {
    const resumeUrl = profile?.resumeUrl ? `${baseURL}${profile.resumeUrl}` : null;
 
 
-  const handleDownload = () => {
-    if (!resumeUrl) return;
-    const a = document.createElement("a");
-    a.href = resumeUrl;
-    a.download = "resume";
-    a.target = "_blank";
-    a.click();
-  };
+  // const handleDownload = () => {
+  //   if (!resumeUrl) return;
+  //   const a = document.createElement("a");
+  //   a.href = resumeUrl;
+  //   a.download = "resume";
+  //   a.target = "_blank";
+  //   a.click();
+  // };
 
   return (
     <div className="p-6 bg-gray-50 ">
