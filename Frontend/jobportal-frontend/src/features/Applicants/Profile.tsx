@@ -6,11 +6,12 @@ import type { ApplicantProfile } from "./applicant.types";
 import { baseURL } from "../../api/axios";
 
 const Profile: React.FC = () => {
-  const { data: profile, isLoading, isError } = useQuery<ApplicantProfile>({
+  const { data: profile, isLoading, isError } = useQuery<ApplicantProfile | null >({
     queryKey: ["applicantProfile"],
     queryFn: fetchApplicantProfile,
   });
 
+ 
   // const [showUploadModal, setShowUploadModal] = useState(false);
 
   if (isLoading) {

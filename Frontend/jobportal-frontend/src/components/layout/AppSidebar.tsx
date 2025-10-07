@@ -133,16 +133,7 @@ console.log(`Role-> ${role}`);
       trigger={null}
     >
       {/* Logo */}
-      {/* <div className="text-white text-xl p-4 text-center">
-        {collapsed ? "JP" :  (
-    <img
-      src={sitelogo}
-      alt="Abay Bank Logo"
-      style={{ maxWidth: "100%", height: "40px", objectFit: "contain" }}
-    />
-  )
-  }
-      </div> */}
+  
 
       <div className="text-white text-xl p-4 text-center">
   {collapsed ? (

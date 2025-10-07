@@ -2,10 +2,25 @@ import { api } from "../../api/axios";
 import  { type ApplicantProfile}  from  "./applicant.types";
 
 
-export const fetchApplicantProfile = async (): Promise<ApplicantProfile> => {
-  const res = await api.get("/api/ApplicantProfiles/me");
-   console.log(res.data)
-  return res.data;
+// export const fetchApplicantProfile = async (): Promise<ApplicantProfile> => {
+//   const res = await api.get("/api/ApplicantProfiles/me");
+//    console.log(res.data)
+//   return res.data;
+// };
+
+
+// applicant.service.ts
+export const fetchApplicantProfile = async (): Promise<ApplicantProfile | null> => {
+  try {
+    const res = await api.get("/api/ApplicantProfiles/me");
+    return res.data;
+  } catch (err: any) {
+    // Handle 404 as "no profile yet"
+    if (err.response?.status === 404) {
+      return null;
+    }
+    throw err;
+  }
 };
 
 // PUT update applicant profile (send only the fields you want to update)

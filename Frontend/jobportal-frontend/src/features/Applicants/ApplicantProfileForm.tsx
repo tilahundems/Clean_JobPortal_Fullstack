@@ -30,7 +30,7 @@ const ApplicantProfileForm: React.FC = () => {
   const [showUploadModal, setShowUploadModal] = useState(false);
 
   // 1) Fetch profile
-  const { data: profile, isLoading, isError } = useQuery<ApplicantProfile>({
+  const { data: profile, isLoading, isError } = useQuery<ApplicantProfile | null>({
     queryKey: ["applicantProfile"],
     queryFn: fetchApplicantProfile,
   });
@@ -49,18 +49,36 @@ const ApplicantProfileForm: React.FC = () => {
   });
 
   // 3) Pre-fill form
-  useEffect(() => {
-    if (profile) {
-      form.setFieldsValue({
-        fullName: profile.fullName,
-        skills: profile.skills,
-        phone: profile.phone,
-        education: profile.education,
-     resumeUrl: profile.resumeUrl,
+  // useEffect(() => {
+  //   if (profile) {
+  //     form.setFieldsValue({
+  //       fullName: profile.fullName,
+  //       skills: profile.skills,
+  //       phone: profile.phone,
+  //       education: profile.education,
+  //    resumeUrl: profile.resumeUrl,
 
-      });
-    }
-  }, [profile, form]);
+  //     });
+  //   }
+  // }, [profile, form]);
+
+
+useEffect(() => {
+  if (profile) {
+    form.setFieldsValue({
+      fullName: profile.fullName,
+      skills: profile.skills,
+      phone: profile.phone,
+      education: profile.education,
+      resumeUrl: profile.resumeUrl,
+    });
+  } else {
+    // reset the form for new applicant
+    form.resetFields();
+  }
+}, [profile, form]);
+
+
 
   // 4) Submit
   const onFinish = (values: any) => {
@@ -165,7 +183,7 @@ const ApplicantProfileForm: React.FC = () => {
                   </Button>
                 </>
               ) : (
-                <span className="text-gray-500">No resume uploaded</span>
+                <span className="text-gray-500 " >No resume uploaded (Pls Save Before Attach )</span>
               )}
               <Button
                 icon={<UploadOutlined />}
@@ -176,6 +194,43 @@ const ApplicantProfileForm: React.FC = () => {
               </Button>
             </div>
           </Form.Item>
+
+{/* 
+<Form.Item label="Resume">
+  <div className="flex flex-col md:flex-row md:items-center md:gap-4">
+    {resumeUrl ? (
+      <>
+        <div className="flex items-center gap-2 text-gray-700 md:flex-0">
+          <PaperClipOutlined className="text-blue-500" />
+          <span>Resume attached</span>
+        </div>
+        <Button
+          type="link"
+          icon={<DownloadOutlined />}
+          onClick={handleDownload}
+          className="md:ml-2"
+        >
+          Download
+        </Button>
+      </>
+    ) : (
+      <span className="text-gray-500">No resume uploaded</span>
+    )}
+    <Button
+      icon={<UploadOutlined />}
+      onClick={() => setShowUploadModal(true)}
+      disabled={!profile?.id}  // ✅ disable if profile doesn't exist yet
+      className="mt-2 md:mt-0 md:ml-auto px-6 w-full md:w-1/2"
+    >
+      {resumeUrl ? "Change Resume" : "Upload Resume"}
+    </Button>
+  </div>
+</Form.Item> */}
+
+
+
+
+
 
             <Form.Item>
               <div className="md:col-span-2 flex justify-center">

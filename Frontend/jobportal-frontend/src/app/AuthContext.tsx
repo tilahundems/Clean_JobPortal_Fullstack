@@ -40,7 +40,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return api.post("api/users/auth/logout", {}, { withCredentials: true });
     },
     onSuccess: () => {
-      // Clear auth state
+       console.log("clearing user !!!!! ");
       setUser(null);
       localStorage.removeItem("user");
       // Invalidate any user-related queries

@@ -21,7 +21,7 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
     const [msgApi, contextHolder] = message.useMessage();
 
   const { id } = useParams<{ id: string }>();
- const { data: profile, isLoading, isError } = useQuery<ApplicantProfile>({
+ const { data: profile, isLoading, isError } = useQuery<ApplicantProfile | null>({
     queryKey: ["applicantProfile"],
     queryFn: fetchApplicantProfile,
   });
@@ -47,7 +47,7 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
        
     },
     onError: (err: any) => {
-      // msgApi.error(err.response.statusText || "Failed to submit application.");
+      msgApi.error(err?.response?.message || "Failed to submit application.");
       console.log(err);
     },
   });

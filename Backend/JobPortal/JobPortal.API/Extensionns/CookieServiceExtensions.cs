@@ -9,8 +9,9 @@ public static class CookieServiceExtensions
             {
                 options.Cookie.Name = "JobPortalAuth";
                 options.Cookie.HttpOnly = true;
-                options.Cookie.SameSite = SameSiteMode.Lax;  // set to None for cross-site
-                options.Cookie.SecurePolicy = CookieSecurePolicy.None; // set Always in production
+                options.Cookie.SameSite = SameSiteMode.None;
+                // SameSiteMode.Lax;  // set to None for cross-site
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // set Always in production
                 options.LoginPath = "/api/Users/Auth/login";
                 options.LogoutPath = "/api/Users/Auth/logout";
                 options.SlidingExpiration = true;

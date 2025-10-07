@@ -8,7 +8,7 @@ public  static class CorsServiceExtensions
             services.AddCors(opt =>
             {
                 opt.AddPolicy("Frontend", p =>
-                    p.WithOrigins("http://localhost:5173", "http://localhost:3000")
+                    p.WithOrigins("http://localhost:5173", "http://localhost:3000","https://abayjobs.netlify.app")
                      .AllowAnyHeader()
                      .AllowAnyMethod()
                      .AllowCredentials());

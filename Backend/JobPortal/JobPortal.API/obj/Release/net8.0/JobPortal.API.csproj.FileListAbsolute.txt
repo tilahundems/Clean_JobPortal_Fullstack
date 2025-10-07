@@ -155,3 +155,6 @@ C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\obj
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\obj\Release\net8.0\JobPortal.API.pdb
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\obj\Release\net8.0\JobPortal.API.genruntimeconfig.cache
 C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\obj\Release\net8.0\ref\JobPortal.API.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Release\net8.0\FluentValidation.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Release\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\dtilahun\Desktop\Abay.dev\Jobportal\Backend\JobPortal\JobPortal.API\bin\Release\net8.0\FluentValidation.DependencyInjectionExtensions.dll
