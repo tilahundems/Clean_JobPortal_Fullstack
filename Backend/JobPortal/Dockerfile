@@ -2,7 +2,11 @@
 
  WORKDIR /src
 
- COPY . .
+ # COPY . .
+COPY JobPortal.API/*.csproj ./JobPortal.API/
+COPY JobPortal.Application/*.csproj ./JobPortal.Application/
+COPY JobPortal.Domain/*.csproj ./JobPortal.Domain/
+COPY JobPortal.Infrastructure/*.csproj ./JobPortal.Infrastructure/
 
  RUN dotnet restore JobPortal.API/JobPortal.API.csproj
 
