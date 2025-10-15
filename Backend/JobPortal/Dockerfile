@@ -4,7 +4,7 @@
 
  COPY . .
 
- RUN dotnet restore 
+ RUN dotnet restore JobPortal.API/JobPortal.API.csproj
 
  RUN dotnet publish -c release -o  /app/publish 
 
