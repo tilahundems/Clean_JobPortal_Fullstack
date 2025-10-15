@@ -16,7 +16,7 @@ permissions:
 
 env:
   BACKEND_PATH: Backend/JobPortal.API
-  FRONTEND_PATH: Frontend
+  FRONTEND_PATH: Frontend/jobportal-frontend
   BACKEND_IMAGE_NAME: jobportal-backend
   FRONTEND_IMAGE_NAME: jobportal-frontend
   REGISTRY: ghcr.io
