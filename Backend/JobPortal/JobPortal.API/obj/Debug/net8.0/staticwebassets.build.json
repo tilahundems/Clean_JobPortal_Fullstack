@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BNRGMdVd54VkeQzkoxCQ+hNtaomTQn38SRwfgBZnvn8=",
+  "Hash": "7+DNxO/BDj4XsLORC3vtWQ4xzrcfrfHsu+Gyxm3wZQM=",
   "Source": "JobPortal.API",
   "BasePath": "_content/JobPortal.API",
   "Mode": "Default",
@@ -321,6 +321,25 @@
       "OriginalItemSpec": "wwwroot\\resumes\\3b326f9b-aadb-4556-9c86-d4538fce3819.pdf"
     },
     {
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\508a5b22-f3d2-4fa7-8b47-c3b8cacb7407.pdf",
+      "SourceId": "JobPortal.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "BasePath": "_content/JobPortal.API",
+      "RelativePath": "resumes/508a5b22-f3d2-4fa7-8b47-c3b8cacb7407.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resumes\\508a5b22-f3d2-4fa7-8b47-c3b8cacb7407.pdf"
+    },
+    {
       "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\5235ffb1-8803-4027-a11d-7e39825b15bf.pdf",
       "SourceId": "JobPortal.API",
       "SourceType": "Discovered",
@@ -433,6 +452,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\resumes\\63f8d68b-548d-4391-a9c8-f9ce8a9ad5e4.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\656c407b-bd27-4618-b051-3fba2ca938dd.pdf",
+      "SourceId": "JobPortal.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\",
+      "BasePath": "_content/JobPortal.API",
+      "RelativePath": "resumes/656c407b-bd27-4618-b051-3fba2ca938dd.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resumes\\656c407b-bd27-4618-b051-3fba2ca938dd.pdf"
     },
     {
       "Identity": "C:\\Users\\dtilahun\\Desktop\\Abay.dev\\Jobportal\\Backend\\JobPortal\\JobPortal.API\\wwwroot\\resumes\\6b1410aa-db45-4ee0-a127-30e105f61756.pdf",

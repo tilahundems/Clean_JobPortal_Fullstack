@@ -2,8 +2,9 @@
 import axios from "axios";
 
 // Use environment variable or fallback
-export const baseURL = import.meta.env.VITE_API_URL ??  "http://abayjobs.tryasp.net";
+export const baseURL = import.meta.env.VITE_API_URL ??  "http://abayjobs.tryasp.net/";
 // "http://localhost:5029";
+//api/*  http://abayjobs.tryasp.net/:splat  200
 
 export const api = axios.create({
   baseURL,

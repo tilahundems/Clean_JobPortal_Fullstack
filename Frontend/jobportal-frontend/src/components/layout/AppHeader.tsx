@@ -13,7 +13,7 @@ export default function AppHeader({ onToggle }: Props) {
       <Button
         type="text"
         icon={<MenuOutlined />}
-        className="max-sm:hidden border-orange-900" // hide on Medium screens
+        className=" border-orange-900" 
         onClick={onToggle}
         
       />

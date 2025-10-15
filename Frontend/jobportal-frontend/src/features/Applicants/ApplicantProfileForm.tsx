@@ -195,39 +195,6 @@ useEffect(() => {
             </div>
           </Form.Item>
 
-{/* 
-<Form.Item label="Resume">
-  <div className="flex flex-col md:flex-row md:items-center md:gap-4">
-    {resumeUrl ? (
-      <>
-        <div className="flex items-center gap-2 text-gray-700 md:flex-0">
-          <PaperClipOutlined className="text-blue-500" />
-          <span>Resume attached</span>
-        </div>
-        <Button
-          type="link"
-          icon={<DownloadOutlined />}
-          onClick={handleDownload}
-          className="md:ml-2"
-        >
-          Download
-        </Button>
-      </>
-    ) : (
-      <span className="text-gray-500">No resume uploaded</span>
-    )}
-    <Button
-      icon={<UploadOutlined />}
-      onClick={() => setShowUploadModal(true)}
-      disabled={!profile?.id}  // ✅ disable if profile doesn't exist yet
-      className="mt-2 md:mt-0 md:ml-auto px-6 w-full md:w-1/2"
-    >
-      {resumeUrl ? "Change Resume" : "Upload Resume"}
-    </Button>
-  </div>
-</Form.Item> */}
-
-
 
 
 
