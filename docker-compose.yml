@@ -1,25 +1,27 @@
 version: '3.9'
+
 services:
- backend :
-    build :
-    context : ./Backend/JobPortal
-    dockerfile: Dockerfile
-    container_name: jobportal-backend
-    ports :
-    - "8080:8080"
-    volumes:  
-          ./Backend/JobPortal/JobPortal.API/JobPortalDb.db:/app/JobPortalDb.db
-    environment:
-        - ASPNETCORE_ENVIRONMENT=Production
-        - UseInMemoryDatabase=false
-        - ASPNETCORE_URLS=http://+:8080
+ backend:
+  build:
+   context : ./Backend/JobPortal
+   dockerfile: Dockerfile
+  container_name: jobportal-backend
+  ports :
+   - "8080:8080"
+  volumes:  
+   - ./Backend/JobPortal/JobPortal.API/JobPortalDb.db:/app/JobPortalDb.db
+  environment:
+    - ASPNETCORE_ENVIRONMENT=Production
+    - UseInMemoryDatabase=false
+    - ASPNETCORE_URLS=http://+:8080
+    
  frontned:
   build:
- context: ./Frontend
- dockerfile: Dockerfile
- container_name: jobportal-frontend
- ports: 
+   context: ./Frontend/jobportal-frontend
+   dockerfile: Dockerfile
+  container_name: jobportal-frontend
+  ports: 
   - "5173:80"
-depends_on: 
- - backend
+  depends_on: 
+  - backend
 
