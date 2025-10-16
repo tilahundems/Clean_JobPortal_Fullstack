@@ -1,6 +1,5 @@
 name: JobPortal CI/CD
 
-# Run CI on PRs and pushes to any branch; run CD only on pushes to main
 on:
   push:
     branches:
@@ -15,12 +14,11 @@ permissions:
   id-token: write
 
 env:
-  BACKEND_PATH: Backend/JobPortal
+  BACKEND_PATH: Backend/JobPortal/JobPortal.API
   FRONTEND_PATH: Frontend/jobportal-frontend
   BACKEND_IMAGE_NAME: jobportal-backend
   FRONTEND_IMAGE_NAME: jobportal-frontend
   REGISTRY: ghcr.io
-  # image tag pattern (commit SHA)
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
@@ -77,32 +75,43 @@ jobs:
         run: npm run build
 
       - name: Log in to GHCR
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # ✅ Fixed section — sets up Buildx with containerd driver
+      - name: Set up Docker Buildx (containerd driver)
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver-opts: image=moby/buildkit:latest
+
       - name: Build & push backend image
         id: push-backend
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ${{ env.BACKEND_PATH }}/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }},${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:latest
+          tags: |
+            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
       - name: Build & push frontend image
         id: push-frontend
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ${{ env.FRONTEND_PATH }}/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }},${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
-          # cache-from: type=gha
-          # cache-to: type=gha,mode=max
+          tags: |
+            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.FRONTEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.FRONTEND_IMAGE_NAME }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   deploy:
     name: Deploy to remote (only main)
@@ -115,9 +124,10 @@ jobs:
 
       - name: Wait for images to be available on GHCR
         run: |
-          echo "Images pushed: backend=${{ needs.build-and-test.outputs.backend-image }} frontend=${{ needs.build-and-test.outputs.frontend-image }}"
+          echo "Images pushed:"
+          echo "Backend: ${{ needs.build-and-test.outputs.backend-image }}"
+          echo "Frontend: ${{ needs.build-and-test.outputs.frontend-image }}"
 
-      # SSH deploy step uses the server to docker-login to GHCR and pull images then docker-compose up -d
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.9
         with:
@@ -136,12 +146,8 @@ jobs:
             echo "Logging in to GHCR on remote..."
             echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
             cd ${{ secrets.DEPLOY_PATH }}
-            echo "Pulling backend image $BACKEND_IMG"
+            echo "Pulling new images..."
             docker pull $BACKEND_IMG
-            echo "Pulling frontend image $FRONTEND_IMG"
             docker pull $FRONTEND_IMG
-            # Option A: update images in docker-compose.yml (replace tags) then docker-compose up -d
-            # If you keep docker-compose.yml using `image: ghcr.io/owner/name:latest`, you can simply pull latest and restart:
             docker-compose up -d
-            # Optional: cleanup dangling images
             docker image prune -f
