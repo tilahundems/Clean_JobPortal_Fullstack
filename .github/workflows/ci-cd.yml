@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 env:
-  BACKEND_PATH: Backend/JobPortal
+  BACKEND_PATH: Backend/JobPortal/JobPortal.API
   FRONTEND_PATH: Frontend/jobportal-frontend
   BACKEND_IMAGE_NAME: jobportal-backend
   FRONTEND_IMAGE_NAME: jobportal-frontend
