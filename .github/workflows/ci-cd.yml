@@ -87,18 +87,18 @@ jobs:
         with:
           driver-opts: image=moby/buildkit:latest
 
-      - name: Build & push backend image
-        id: push-backend
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ${{ env.BACKEND_PATH }}/Dockerfile
-          push: true
-          tags: |
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }}
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+      # - name: Build & push backend image
+      #   id: push-backend
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: .
+      #     file: ${{ env.BACKEND_PATH }}/Dockerfile
+      #     push: true
+      #     tags: |
+      #       ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+      #       ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.BACKEND_IMAGE_NAME }}:latest
+      #     cache-from: type=gha
+      #     cache-to: type=gha,mode=max
 
       - name: Build & push frontend image
         id: push-frontend
